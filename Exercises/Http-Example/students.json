@@ -1,0 +1,17 @@
+{ 
+    "students": [
+        { "name": "Sergey", "capsule": "3", "id": "1" },
+        { "name": "Hassen", "capsule": "3", "id": "2" },
+        { "name": "Or", "capsule": "3", "id": "3" },
+        { "name": "Inna", "capsule": "3", "id": "4" },
+        { "name": "Maxim", "capsule": "3", "id": "5" },
+        { "name": "Natalie", "capsule": "3", "id": "6" },
+        { "name": "Hila", "capsule": "3", "id": "7" },
+        { "name": "Dima", "capsule": "4", "id": "8" },
+        { "name": "David", "capsule": "4", "id": "9" },
+        { "name": "Netta", "capsule": "4", "id": "10" },
+        { "name": "Eyal", "capsule": "4", "id": "11" },
+        { "name": "Ayelet", "capsule": "4", "id": "12" },
+        { "name": "Adi", "capsule": "4", "id": "13" }
+    ]
+}
