@@ -1,0 +1,29 @@
+{
+    "workers": [
+        {
+            "name": "Sergey Aronov",
+            "id": 1, 
+            "isActive": true
+        },
+        {
+            "name": "Matt Tress",
+            "id": 4,
+            "isActive": false
+        },
+        {
+            "name": "Jack Pott",
+            "id": 8,
+            "isActive": false
+        },
+        {
+            "name": "Biff Wellington",
+            "id": 2,
+            "isActive": true
+        },
+        {
+            "name": "Charity Case",
+            "id": 5,
+            "isActive": true
+        }
+    ]
+}

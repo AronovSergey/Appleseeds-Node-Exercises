@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./Exercises/09.2-PURE_NODE/09.2-PURE_NODE.js"
+    "start": "node ./Exercises/15.2-Restaurant_Queries/15.2-Restaurant_Queries.js"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
     "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
+    "mongodb": "^3.6.6",
     "request": "^2.88.2",
     "superagent": "^6.1.0"
   }
