@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./Exercises/15.2-Restaurant_Queries/15.2-Restaurant_Queries.js"
+    "start": "nodemon ./Exercises/18.1-Create_And_Read_Products/app.js"
   },
   "repository": {
     "type": "git",

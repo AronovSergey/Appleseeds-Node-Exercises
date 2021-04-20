@@ -21,7 +21,7 @@ const Product = mongoose.model("Product", {
           }
         },
       },
-      discount: { type: Number, required: false, default: 0 },
+      discount: { type: Number, required: false, default: 0, minLength: 10 },
       images: {
         type: [
           {
