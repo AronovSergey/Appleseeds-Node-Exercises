@@ -1,14 +1,12 @@
 const express = require("express");
-const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 
 const app = express();
 const productsRouter = require("./routes/product.route");
 
-app.use(bodyParser.urlencoded({ extended: false }));
-app.use(bodyParser.json());
+app.use(express.json());
 
-app.use("/api/rooms", productsRouter);
+app.use("/api/products", productsRouter);
 
 //connect to db with mongoose
 mongoose
