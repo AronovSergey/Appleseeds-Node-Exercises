@@ -1,4 +1,5 @@
 const mongoose = require("mongoose");
+const validator = require("validator");
 
 const productSchema = mongoose.Schema({
   name: { type: String, required: true, unique: true },
@@ -33,7 +34,7 @@ const productSchema = mongoose.Schema({
       minLength: 10,
       required: true,
       validate(value) {
-        if (!value.startsWith("05")) {
+        if (!validator.isMobilePhone(value, "he-IL")) {
           throw new Error("Not A valid israeli Number");
         }
       },
