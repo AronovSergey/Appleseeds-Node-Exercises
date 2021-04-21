@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon ./Exercises/19.1-Refactor_To_Async_Await/app.js"
+    "start": "nodemon ./Exercises/Authentication_And_Security/src/index.js"
   },
   "repository": {
     "type": "git",
