@@ -1,6 +1,8 @@
 const express = require("express");
 const mongoose = require("mongoose");
 
+const userRouter = require("./routers/user.route");
+
 const app = express();
 const port = process.env.PORT || 8000;
 
@@ -8,7 +10,7 @@ const port = process.env.PORT || 8000;
 app.use(express.json());
 
 //Routes
-// app.use("/api/products", productsRouter);
+app.use("/api/user", userRouter);
 
 //Connect to db with mongoose
 mongoose
