@@ -62,7 +62,7 @@ const getProductsByPriceRange = async (req, res) => {
 
 const update = async (req, res) => {
   const updates = Object.keys(req.body);
-  const allowedUpdates = ["isActive", "discount"];
+  const allowedUpdates = ["isActive", "details.discount"];
   const isValidOperation = updates.every((update) =>
     allowedUpdates.includes(update)
   );
@@ -71,10 +71,7 @@ const update = async (req, res) => {
   try {
     const product = await productModel.findByIdAndUpdate(
       req.params.id,
-      {
-        isActive: req.body.isActive,
-        "details.discount": req.body.discount,
-      },
+      req.body,
       { new: true, runValidators: true }
     );
     if (!product) {
