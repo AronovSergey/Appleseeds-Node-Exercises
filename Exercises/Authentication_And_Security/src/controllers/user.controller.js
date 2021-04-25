@@ -35,6 +35,18 @@ exports.createNewUser = async (req, res) => {
 	}
 };
 
+exports.login = async (req, res) => {
+	try {
+		const user = await UserModel.findByCredentials(
+			req.body.email,
+			req.body.password
+		);
+		res.send(user);
+	} catch (error) {
+		res.status(400).send(error);
+	}
+};
+
 exports.update = async (req, res) => {
 	const updates = Object.keys(req.body);
 	const allowedUpdates = ["name", "email", "password", "age"];

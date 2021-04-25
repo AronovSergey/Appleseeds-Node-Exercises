@@ -6,6 +6,7 @@ router
 	.get("/", userControler.getAllUsers)
 	.get("/:id", userControler.getOneUser)
 	.post("/", userControler.createNewUser)
+	.post("/login", userControler.login)
 	.put("/:id", userControler.update)
 	.delete("/:id", userControler.remove);
 
