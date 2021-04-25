@@ -5,7 +5,7 @@ const router = express.Router();
 
 router
 	.get("/", auth, userControler.getMyProfile)
-	.post("/", userControler.signin)
+	.post("/signin", userControler.signin)
 	.post("/login", userControler.login)
 	.post("/logout", auth, userControler.logout)
 	.post("/logout-all", auth, userControler.logoutAllDevices)
