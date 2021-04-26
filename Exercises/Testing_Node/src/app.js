@@ -5,7 +5,6 @@ const userRouter = require("./routers/user.route");
 const taskRouter = require("./routers/task.route");
 
 const app = express();
-const port = process.env.PORT;
 
 //Express Middlewares
 app.use(express.json());
@@ -26,7 +25,4 @@ mongoose
 		console.log("Database connect");
 	});
 
-//Connected to server
-app.listen(port, () => {
-	console.log("Server listening on port " + port);
-});
+module.exports = app;
