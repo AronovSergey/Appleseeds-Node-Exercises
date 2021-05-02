@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node ./Exercises/Authentication_And_Security/src/index.js",
-    "dev": "env-cmd ./config/dev.env nodemon ./Exercises/Sending_Emails/src/index.js",
+    "dev": "env-cmd ./config/dev.env nodemon ./Exercises/Testing_Node/src/index.js",
     "test": "env-cmd ./config/test.env jest --watch"
   },
   "jest": {

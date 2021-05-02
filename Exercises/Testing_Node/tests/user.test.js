@@ -1,26 +1,9 @@
 const request = require("supertest");
-const jwt = require("jsonwebtoken");
-const mongoose = require("mongoose");
 const app = require("../src/app");
 const UserModel = require("../src/models/user.model");
+const { userOneId, userOne, setupDatabase } = require("./fixtures/db");
 
-const userOneId = new mongoose.Types.ObjectId();
-const userOne = {
-	_id: userOneId,
-	name: "Mike",
-	email: "Mike@gmail.com",
-	password: "Aa123456",
-	tokens: [
-		{
-			token: jwt.sign({ _id: userOneId }, process.env.JWT_SECRET),
-		},
-	],
-};
-
-beforeEach(async () => {
-	await UserModel.deleteMany();
-	await new UserModel(userOne).save();
-});
+beforeEach(setupDatabase);
 
 test("Should signup a new user", async () => {
 	const response = await request(app)
@@ -94,12 +77,4 @@ test("Should delete account for user", async () => {
 	const user = await UserModel.findById(userOneId);
 
 	expect(user).toBeNull();
-});
-
-test("Should not delete account for unauthenticated user", async () => {
-	await request(app)
-		.delete("/api/users")
-		.set("Authorization", `Some wrong token`)
-		.send()
-		.expect(401);
 });
